@@ -1,0 +1,183 @@
+var randomBodyParts = [
+	'eye',
+	'nose',
+	'mouth',
+	'ear',
+	'cheek',
+	'chin',
+	'nostrill',
+	'eyebrow',
+	'eyelid',
+	'eyelash',
+	'lips'
+];
+var randomAdjectives = [
+	'attractive',
+	'bald',
+	'beautiful',
+	'chubby',
+	'clean',
+	'dazzling',
+	'drab',
+	'elegant',
+	'fancy',
+	'fit',
+	'flabby',
+	'glamorous',
+	'gorgeous',
+	'handsome',
+	'long',
+	'magnificent',
+	'muscular',
+	'plain',
+	'plump',
+	'quaint',
+	'scruffy',
+	'shapely',
+	'short',
+	'skinny',
+	'stocky',
+	'ugly',
+	'unkempt',
+	'unsightly',
+];
+var randomWords = [
+	'angle',
+	'ant',
+	'apple',
+	'arch',
+	'arm',
+	'army',
+	'baby',
+	'bag',
+	'ball',
+	'band',
+	'basin',
+	'basket',
+	'bath',
+	'bed',
+	'bee',
+	'bell',
+	'berry',
+	'blade',
+	'board',
+	'boat',
+	'bone',
+	'book',
+	'boot',
+	'bottle',
+	'box',
+	'boy',
+	'brain',
+	'brake',
+	'branch',
+	'brick',
+	'bridge',
+	'brush',
+	'bucket',
+	'bulb',
+	'button',
+	'cake',
+	'camera',
+	'card',
+	'cart',
+	'carriage',
+	'cat',
+	'chain',
+	'cheese',
+	'chest',
+	'chin',
+	'church',
+];
+var randomAnimals = [
+	'frog',
+	'frogspawn',
+	'newt',
+	'tadpole',
+	'toad',
+	'scorpion',
+	'spider',
+	'tarantula',
+	'barbel',
+	'carp',
+	'cod',
+	'crab',
+	'eel',
+	'goldfish',
+	'haddock',
+	'halibut',
+	'jellyfish',
+	'lobster',
+	'perch',
+	'pike',
+	'plaice',
+	'ray',
+	'salmon',
+	'sawfish',
+	'scallop',
+	'shark',
+	'shell',
+	'shrimp',
+	'ant',
+	'aphid',
+	'bee',
+	'beetle',
+	'bumblebee',
+	'caterpillar',
+	'cockroach',
+	'dragonfly',
+	'flea',
+	'fly',
+	'gadfly',
+	'grasshopper',
+	'harvestman',
+	'ladybug',
+	'larva',
+];
+var randomAnimalsBodyParts = [
+	'Head',
+	'Eye',
+	'Nose',
+	'Mouth',
+	'Mandible',
+	'Neck',
+	'Front',
+	'Tail',
+	'Pygal',
+	'Claw',
+	'Marginal',
+	'Hind', 
+	'Costal', 
+	'Vertebral', 
+	'Nuchal',
+]
+function randomNum(array) {
+	return Math.floor(Math.random() * array.length)
+}
+// Your [BodyParts] is so [Adjectives] [randomWords]
+console.log('Your ' + randomBodyParts[randomNum(randomBodyParts)] 
+	+ ' is so ' + randomAdjectives[randomNum(randomAdjectives)] 
+	+ ' ' + randomWords[randomNum(randomWords)]);
+
+// Your [BodyParts] is even more [Adjectives] than [Animal]'s [AnimalBodyParts]
+console.log('Your ' + randomBodyParts[randomNum(randomBodyParts)] 
+	+ ' is even more ' + randomAdjectives[randomNum(randomAdjectives)] 
+	+ ' than ' + randomAnimals[randomNum(randomAnimals)] + '\'s ' 
+	+ randomAnimalsBodyParts[randomNum(randomAnimalsBodyParts)].toLowerCase())
+
+randomBody = randomBodyParts[randomNum(randomBodyParts)]
+// join array
+console.log([
+	'Your', 
+	randomBody, 
+	'is even more', 
+	randomAdjectives[randomNum(randomAdjectives)],
+	'than',
+	randomAnimals[randomNum(randomAnimals)],
+	randomAnimalsBodyParts[randomNum(randomAnimalsBodyParts)].toLowerCase()
+].join(' '));
+
+
+var taskList = [3, 2, 1];
+var str = taskList.join(' больше, чем ');
+console.log(str);
